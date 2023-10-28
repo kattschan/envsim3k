@@ -1,8 +1,12 @@
 <script>
 	import { pages } from '../pages.ts';
     export let page = 'introduction';
-
 </script>
+<svelte:head>
+    {#each Object.keys(pages) as page}
+    <link rel="preload" href="/image/{page}.jpg" as="image">
+    {/each}
+</svelte:head>
 <style>
     .storyImage {
         width: 100%;
@@ -12,21 +16,29 @@
     <div class="grid no-space">
       <div class="s6">
         <img class="responsive" src="/image/{page}.jpg"><!----><!---->
-        <div class="absolute bottom left right padding top-shadow white-text">
+        <div class="absolute bottom left right padding bottom-shadow white-text">
           {@html pages[page].image_attribution}
         </div>
       </div>
       <div class="s6">
         <div class="padding">
-          <h5>Title</h5>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <h5>{pages[page].text}</h5>
+          <p>{pages[page].description !== null ? pages[page].description : "Choose an option below!"}</p>
         </div>
       </div>
     </div>
   </article>
   <div class="space"></div>
   <div class="row center-align">
-  <button class="border round">Button</button>
-  <button class="border round">Button</button>
-  <button class="border round">Button</button>
+  
+<nav class="no-space" style="width:100%">
+    {#each pages[page].choices as choice}
+    <button class="border no-round max extra tertiary-container"
+    on:click={() => {
+        page = choice.next_identifier;
+    }}>
+      <span>{choice.text}</span>
+    </button>
+    {/each}
+  </nav>
 </div>
