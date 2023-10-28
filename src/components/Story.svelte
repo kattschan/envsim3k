@@ -29,6 +29,4 @@
   <button class="border round">Button</button>
   <button class="border round">Button</button>
   <button class="border round">Button</button>
-  <button class="border round">Button</button>
-  <button class="border round">Button</button>
 </div>

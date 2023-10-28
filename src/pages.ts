@@ -78,14 +78,9 @@ export const pages: { [key: string]: Page; } =
                 next_identifier: null,
             },
             {
-                text: "Walk",
+                text: "Bike / Walk",
                 score_modifier: 2,
                 next_identifier: null
-            },
-            {
-                text: "Bike",
-                score_modifier: 2,
-                next_identifier: null,
             },
         ]
     },
