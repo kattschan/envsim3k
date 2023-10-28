@@ -1,6 +1,7 @@
 <script>
 	import { pages } from '../pages.ts';
     export let page = 'introduction';
+    export let path = [];
 </script>
 <svelte:head>
     {#each Object.keys(pages) as page}
@@ -29,6 +30,11 @@
             {#each pages[page].choices as choice}
             <button class="border no-round max extra tertiary-container"
             on:click={(e) => {
+                const chosen = {
+                    question: pages[page].text,
+                    answer: choice.text,
+                    note: choice.note
+                }
                 e.target.blur();
                 page = choice.next_identifier;
             }}>
@@ -46,6 +52,13 @@
     {#each pages[page].choices as choice}
     <button class="border no-round max extra tertiary-container"
     on:click={(e) => {
+        const chosen = {
+            question: pages[page].text,
+            answer: choice.text,
+            note: choice.note
+        }
+        // path.push(chosen);
+        path = [...path, chosen];
         e.target.blur();
         page = choice.next_identifier;
     }}>
@@ -54,3 +67,9 @@
     {/each}
   </nav>
 </div>
+
+{#if page === "outro"}
+{#each path as step}
+    
+{/each}
+{/if}
