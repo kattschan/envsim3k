@@ -12,7 +12,7 @@
 	summary of your choices and where your behaviours support the environment.
 </p>
 <a data-ui="#storyPage"><button class="small-round">Start your Journey!</button></a>
-
+<div class="space"></div>
 <div class="page right" id="storyPage">
 	<Story />
 </div>

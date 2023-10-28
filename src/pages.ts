@@ -16,7 +16,15 @@ const school_name: string = "Kat High";
 export const pages: { [key: string]: Page; } =
 {
     introduction: {
-        text: `You are a student who goes to ${school_name}.`
+        text: `You are a student who goes to ${school_name}.`,
+        image_attribution: `Photo by <a href="https://unsplash.com/@lanirudhreddy?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">ANIRUDH</a> on <a href="https://unsplash.com/photos/a-view-of-the-earth-from-space-at-night-Xu4Pz7GI9JY?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>`,
+        choices: [
+            {
+                text: "Go!",
+                score_modifier: 0,
+                next_identifier: "shower_temp",
+            }
+        ]
     },
     shower_temp: {
         text: "You wake up in the morning and want to take a shower. What temperature shower will you take?",
@@ -95,6 +103,20 @@ export const pages: { [key: string]: Page; } =
                 score_modifier: 1,
                 next_identifier: null
             }
+        ]
+    },
+    drink_purchase: {
+        text: "You have a test in your first period class. The teacher lets you choose to take the test on paper or on computer. What do you choose?",
+        image_attribution: null,
+        choices: [
+            {
+                text: "Computer",
+                score_modifier: 1,
+                next_identifier: null,
+            },
+            // {
+
+            // }
         ]
     }
 };
