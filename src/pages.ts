@@ -120,7 +120,7 @@ export const pages: { [key: string]: Page; } =
         ]
     },
     take_test: {
-        text: "You have a test in your first period class. The teacher lets you choose to take the test on paper or on computer. What do you choose?",
+        text: "You have a test in your first period history class. The teacher lets you choose to take the test on paper or on computer. What do you choose?",
         description: "Paper and ink are less sustainable than computer pixels.",
         image_attribution: `Photo by <a href="https://unsplash.com/@nguyendhn?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Nguyen Dang Hoang Nhu</a> on <a href="https://unsplash.com/photos/person-writing-on-white-paper-qDgTQOYk6B8?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
         `,
@@ -129,13 +129,13 @@ export const pages: { [key: string]: Page; } =
                 text: "Computer",
                 score_modifier: 1,
                 next_identifier: "drink",
-                note: "Taking a test on a computer may be a bit harder but "
+                note: "Taking a test on a computer may be a bit harder but helps use less waste from ink and paper!"
             },
             {
                 text: "Paper and pencil",
                 score_modifier: -1,
                 next_identifier: "drink",
-                note: "Taking a test on a computer may be a bit harder but "
+                note: "Paper and pencil is great for taking tests in certain subjects but results in more waste."
             }
         ],
     },
@@ -224,7 +224,7 @@ export const pages: { [key: string]: Page; } =
     outro: {
         text: "You have finished your journey!",
         description: "Here are your results!",
-        image_attribution: null,
+        image_attribution: `Photo by <a href="https://unsplash.com/@tsujigimi?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Gregory Pappas</a> on <a href="https://unsplash.com/photos/woman-sleeping-on-bed-under-blankets-rUc9hVE-L-E?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>`,
         choices: []
     }
 };
