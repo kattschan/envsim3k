@@ -98,7 +98,9 @@
 <h1>Score: {Math.floor((score / 7) * 100)}%</h1>
 <h5>{score_lut[score]}</h5>
 <h5>Now, imagine if everybody in your school did the same thing as you. How do you think the world would look like?</h5>
-<h6>Maybe something like this?</h6>
+<h5>Simple actions in your life can have a severe consequence on the environment. Even though it may not seem like it, if everybody follows what you do, then dire consequences may occur!</h5>
+<hr>
+<h1>Review your choices</h1>
 {#each path as step}
 {#if step.page != "introduction"}
 <article class="no-padding">
