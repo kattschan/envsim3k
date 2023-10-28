@@ -13,7 +13,7 @@
       "You perform some envirionmentally unfriendly actions, but are somewhat environmentally friendly", // 2
       "You are quite environmentally friendly!", // 3
       "You are environmentally friendly!", // 4
-      "You are environmentally friendly!", , //5 
+      "You are environmentally friendly!", //5 
       "Your actions do not harm the environment much!", // 6
       "Your actions do not harm the environment much!", // 7
     ]
